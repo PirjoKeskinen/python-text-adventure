@@ -104,6 +104,7 @@ def peli():
 
                 if not pelaaja.autiomaa_reitti:
                     pelaaja.autiomaa_reitti.append(suunta)
+                    print("Harhailet sumussa...")
                     continue
 
                 viimeisin = pelaaja.autiomaa_reitti[-1]
@@ -116,12 +117,13 @@ def peli():
                     if not pelaaja.autiomaa_reitti:
                         pelaaja.poistu_autiomaasta()
                         nykyinen_paikka = "pelto"
-                        print("Sumu väistyy. Olet selvinnyt pois autiomaasta.")
+                        print("Sumu väistyy. Olet selvinnyt pois autiomaasta.\n")
                         nayta_paikka(nykyinen_paikka)
                     continue
 
                 else:
                     pelaaja.autiomaa_reitti.append(suunta)
+                    print("Sumu ympäröi sinua joka puolella...")
                     continue
 
             suunnat = paikat[nykyinen_paikka]['suunnat']
@@ -151,7 +153,6 @@ def peli():
                 if not pelaaja.autiomaassa:
                     pelaaja.aloita_autiomaa()
                     nykyinen_paikka = "autiomaa"
-                    print("Astut autiomaahan. Sumun keskellä suuntavaistosi pettää...")
                     nayta_paikka("autiomaa")
                     continue
 
@@ -194,9 +195,13 @@ def peli():
 
         # Katsele
         elif komento == "katsele":
-            nayta_paikka(nykyinen_paikka, katsele=True)
-            if nykyinen_paikka == "autiomaa" and pelaaja.autiomaassa:
-                tulosta_hitaasti(lue_tiedosto("autiomaa_eksynyt.txt"))
+            if pelaaja.autiomaassa:
+                if not pelaaja.autiomaa_reitti:
+                    nayta_paikka("autiomaa", katsele=True)
+                else:
+                    tulosta_hitaasti(lue_tiedosto("autiomaa_eksynyt.txt"))
+            else:
+                nayta_paikka(nykyinen_paikka, katsele=True)
 
         # Ota
         elif komento.startswith("ota "):
@@ -267,10 +272,9 @@ def peli():
                 print(f"Happi: {pelaaja.happi} %")
             else:
                 print(f"Happijärjestelmä ei ole käytössä.")
+
             if pelaaja.loukkaantunut:
                 print("Olet loukkaantunut: hengitys kuluttaa enemmän happea.")
-            else:
-                print("Sinulla ei ole varusteita päällä.")
 
         # Mukana olevat tavarat
         elif komento in ("mukana", "esineet"):
