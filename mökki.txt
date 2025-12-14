@@ -1,0 +1,11 @@
+Mökki
+
+Täällä on vanha puinen mökki, jossa
+ovi on auki.
+
+Katsele:
+
+Mökin sisällä on pöytä, jonka päällä
+näyttäisi olevan jokin PÄIVÄKIRJA.
+Mökissä on myös vuode, jonka päällä
+makaa ihmisen luuranko.

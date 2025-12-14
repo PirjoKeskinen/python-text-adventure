@@ -1,0 +1,23 @@
+*****************************************************
+
+KOMENNOT
+
+Liikkuminen:
+- mene <pohjoinen, itä, etelä, länsi>
+
+Toiminnot:
+- katsele	[Katsele nykyistä paikkaa tarkemmin]
+- ota <esine>	[Ota löytämä esine mukaasi]
+- pudota <esine>[Pudota mukana oleva esine]
+- mukana	[Näytä kantamat esineet]
+- pue <esine>	[Pue päällesi]
+- tarkista	[Tarkista käyttämä hapen määrä]
+- syö <esine>	[Syö]
+- lue <esine>	[Lue]
+- asenna <esine>[Asenna]
+
+Muut:
+- apua		[Näytä komennot]
+- lopeta	[Lopeta peli]
+
+*****************************************************
