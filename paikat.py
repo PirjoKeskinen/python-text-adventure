@@ -1,3 +1,10 @@
+"""
+Operaatio Anthophila – Python Text Adventure
+© 2026 Pirjo Keskinen. Original work. All rights reserved.
+
+All story elements, locations, and characters are original creations.
+"""
+
 def lue_tiedosto(tiedostonnimi):
     with  open(tiedostonnimi, 'r', encoding='utf-8') as f:
         return f.read()
