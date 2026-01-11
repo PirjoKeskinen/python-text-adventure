@@ -1,3 +1,10 @@
+"""
+Operaatio Anthophila – Python Text Adventure
+© 2026 Pirjo Keskinen. Original work. All rights reserved.
+
+All story elements, locations, and characters are original creations.
+"""
+
 class Pelaaja:
     def __init__(self):
         self.esineet = []           # Esineet, joita pelaajalla on
