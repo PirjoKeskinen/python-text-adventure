@@ -18,7 +18,7 @@ def lue_tiedosto(tiedostonnimi):
     return teksti
 
 # Tulostaa tekstin kirjain kerrallaan
-def tulosta_hitaasti(teksti, viive = 0.05):
+def tulosta_hitaasti(teksti, viive = 0.02):
     keskeyta = False
     # Intron voi keskeyttää painamalla enter
     def kuuntele_enter():
